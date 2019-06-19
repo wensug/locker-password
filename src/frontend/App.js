@@ -5,15 +5,15 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-        password: []
+      password: []
     };
-}
+  }
 
-handleButton() {
-  fetch('/rest/lockercombination')
+  handleButton() {
+    fetch("/rest/locker-combination")
       .then(response => response.json())
       .then(data => this.setState({ password: data.password }))
-      .catch(error => console.log(error))
+      .catch(error => console.log(error));
   }
 
   render() {
@@ -23,8 +23,8 @@ handleButton() {
           <h2>5-digit locker combination</h2>
         </header>
         <button className="button" onClick={() => this.handleButton()}>
-					Show my password
-				</button>
+          Show my password
+        </button>
         <label>{this.state.password}</label>
       </div>
     );

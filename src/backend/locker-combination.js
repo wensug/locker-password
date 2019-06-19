@@ -14,11 +14,13 @@ let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     return password;
   }, [])[0];
 }
+
 function getFourthDig(number) {
   if (number % 3 === 0) {
     return number / 3;
   }
 }
+
 function sumDigit(firstNumber, secondNumber, fourthNumber, numbers) {
   for (let i = 0; i <= numbers.length; i++) {
     let firstAndThirdSum = firstNumber + numbers[i];
@@ -29,15 +31,7 @@ function sumDigit(firstNumber, secondNumber, fourthNumber, numbers) {
           firstNumber + secondNumber + numbers[i] + fourthNumber + numbers[j];
         if (Number(sumNumber) === 26) {
           return (
-            firstNumber +
-            "" +
-            secondNumber +
-            "" +
-            numbers[i] +
-            "" +
-            fourthNumber +
-            "" +
-            numbers[j]
+            `${firstNumber}${secondNumber}${numbers[i]}${fourthNumber}${numbers[j]}`
           );
         }
       }

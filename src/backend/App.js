@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const getPassword = require("./lockercombination");
+const getPassword = require("./locker-combination");
 const port = 3001;
 
-app.get("/rest/lockercombination", (req, res) => {
+app.get("/rest/locker-combination", (req, res) => {
   res.send({ password: getPassword() });
 });
 
