@@ -20,10 +20,10 @@ handleButton() {
     return (
       <div className="App">
         <header className="App-header">
-          <p>5-digit locker combination</p>
+          <h2>5-digit locker combination</h2>
         </header>
         <button className="button" onClick={() => this.handleButton()}>
-					Show my Password
+					Show my password
 				</button>
         <label>{this.state.password}</label>
       </div>
